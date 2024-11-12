@@ -1,0 +1,11 @@
+/* 横並びにするためのコンテナ */
+.row {
+    display: flex;
+    gap: 10px; /* 要素間の隙間 */
+    margin-bottom: 10px; /* 下段との隙間 */
+}
+
+/* ラベルと入力フィールドを整列 */
+label, input {
+    display: inline-block;
+}

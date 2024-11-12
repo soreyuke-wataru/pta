@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>日付選択</title>
+    <link rel="stylesheet" href="style.css"> <!-- CSSファイルを読み込む -->
+</head>
+<body>
+    <h2>日付を選択してください</h2>
+    <form id="dateForm">
+        <h3>ルールA</h3>
+        <div class="row">
+            <label for="application_date_a">申請日（A）:</label>
+            <input type="date" id="application_date_a" name="application_date_a">
+            
+            <label for="notification_to_application_date">申請に対する通知日（B）:</label>
+            <input type="date" id="notification_to_application_date" name="notification_to_application_date">
+        </div>
+
+        <div class="row">
+            <label for="national_stage_date">国内段階日（A）:</label>
+            <input type="date" id="national_stage_date" name="national_stage_date">
+            
+            <label for="notification_to_national_stage_date">国内段階に対する通知日（B）:</label>
+            <input type="date" id="notification_to_national_stage_date" name="notification_to_national_stage_date">
+        </div>
+
+        <div class="row">
+            <label for="reply_under_132_date">132条に基づく応答日（A）:</label>
+            <input type="date" id="reply_under_132_date" name="reply_under_132_date">
+            
+            <label for="respond_to_reply_date">応答への対応日（B）:</label>
+            <input type="date" id="respond_to_reply_date" name="respond_to_reply_date">
+        </div>
+
+        <div class="row">
+            <label for="appeal_under_134_date">134条に基づく控訴（A）:</label>
+            <input type="date" id="appeal_under_134_date" name="appeal_under_134_date">
+            
+            <label for="respond_to_appeal_date">控訴への対応日（B）:</label>
+            <input type="date" id="respond_to_appeal_date" name="respond_to_appeal_date">
+        </div>
+
+        <div class="row">
+            <label for="Patent_Trial_decision_date">Patent Trialの決定日（A）:</label>
+            <input type="date" id="Patent_Trial_decision_date" name="Patent_Trial_decision_date">
+            
+            <label for="respond_to_PTdecision_date">PT決定に基づく対応日（B）:</label>
+            <input type="date" id="respond_to_PTdecision_date" name="respond_to_PTdecision_date">
+        </div>
+
+        <div class="row">
+            <label for="Appeal_Board_decision_date">Appeal Boardの決定日（A）:</label>
+            <input type="date" id="Appeal_Board_decision_date" name="Appeal_Board_decision_date">
+            
+            <label for="respond_to_ABdecision_date">AB決定に基づく対応日（B）:</label>
+            <input type="date" id="respond_to_ABdecision_date" name="respond_to_ABdecision_date">
+        </div>
+  
+        <div class="row">
+            <label for="Federal_Court_decision_date">Federal Courtの決定日（A）:</label>
+            <input type="date" id="Federal_Court_decision_date" name="Federal_Court_decision_date">
+            
+            <label for="respond_to_FCdecision_date">FC決定に基づく対応日（B）:</label>
+            <input type="date" id="respond_to_FCdecision_date" name="respond_to_FCdecision_date">
+        </div>
+ 
+        <div class="row">
+            <label for="issue_fee_paid_date">発行手数料支払い完了日（A）:</label>
+        <input type="date" id="issue_fee_paid_date" name="issue_fee_paid_date">
+            
+            <label for="patent_issuance_date_a">特許発行日（B）:</label>
+            <input type="date" id="patent_issuance_date_a" name="patent_issuance_date_a">
+        </div>
+
+        <h3>ルールB</h3>
+        <div class="row">
+            <label for="application_or_national_stage_date">申請または国内段階日（A）:</label>
+            <input type="date" id="application_or_national_stage_date" name="application_or_national_stage_date">
+            
+            <label for="patent_issuance_date_b">特許発行日（B）:</label>
+            <input type="date" id="patent_issuance_date_b" name="patent_issuance_date_b">
+        </div>
+
+        <h3>ルールC</h3>
+        <div>
+            <label for="delay_135a">135aの手続きによる遅れ:</label>
+            <input type="number" id="delay_135a" name="delay_135a">
+        </div>
+        <div>
+            <label for="delay_181">181条の命令による遅れ:</label>
+            <input type="number" id="delay_181" name="delay_181">
+        </div>
+        <div>
+            <label for="delay_review">上訴審査による遅れ:</label>
+            <input type="number" id="delay_review" name="delay_review">
+        </div>
+        
+        <h3>申請人遅延</h3>
+        <div class="row">
+            <label for="first_office_response_date">当局の第一応答日:</label>
+            <input type="date" id="first_office_response_date" name="first_office_response_date">
+
+            <label for="first_applicant_response_date">申請人の第一応答日:</label>
+            <input type="date" id="first_applicant_response_date" name="first_applicant_response_date">
+        </div>
+        <div class="row">
+            <label for="second_office_response_date">当局の第二応答日:</label>
+            <input type="date" id="second_office_response_date" name="second_office_response_date">
+
+            <label for="second_applicant_response_date">申請人の第二応答日:</label>
+            <input type="date" id="second_applicant_response_date" name="second_applicant_response_date">
+        </div>
+        <div class="row">
+            <label for="third_office_response_date">当局の第三応答日:</label>
+            <input type="date" id="third_office_response_date" name="third_office_response_date">
+
+            <label for="third_applicant_response_date">申請人の第三応答日:</label>
+            <input type="date" id="third_applicant_response_date" name="third_applicant_response_date">
+        </div>
+        <button type="button" onclick="calculateTotalExcess()">計算する</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script src="pta.js"></script>
+</body>
+</html>
